@@ -70,6 +70,7 @@
       $.extend({
         path: ""
         placement: "right"
+        container: false
         title: ""
         content: ""
         next: if i == @_steps.length - 1 then -1 else i + 1
@@ -215,6 +216,7 @@
 
       $(step.element).popover('destroy').popover({
         placement: step.placement
+        container: step.container
         trigger: "manual"
         title: step.title
         content: content

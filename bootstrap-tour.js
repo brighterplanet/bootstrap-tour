@@ -87,6 +87,7 @@
           return $.extend({
             path: "",
             placement: "right",
+            container: false,
             title: "",
             content: "",
             next: i === this._steps.length - 1 ? -1 : i + 1,
@@ -241,6 +242,7 @@
         content += "<a href='#' class='pull-right end'>" + options.labels.end + "</a>";
         $(step.element).popover('destroy').popover({
           placement: step.placement,
+          container: step.container,
           trigger: "manual",
           title: step.title,
           content: content,
